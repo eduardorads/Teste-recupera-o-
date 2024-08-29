@@ -13,7 +13,8 @@ export const perguntas = [
                 proxima: 2,
             },
         ]
-    },
+    },bifurcação
+
     {
         enunciado: "Você encontrou um acampamento.",
         alternativas: [
@@ -26,7 +27,7 @@ export const perguntas = [
                 texto: "Elas te pediram um pouco de alimento.",
                 afirmacao: ["Dar um pouco do seu alimento.", "Não entregar pois os alimentos estão escassos."],
                 proxima: 4,
-            },
+            },{{
         ]
     },
     {
