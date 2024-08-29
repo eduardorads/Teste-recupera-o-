@@ -45,7 +45,7 @@ export const perguntas = [
         ]
     },
     {
-        enunciado: "Você está em uma bifurcação.",
+        enunciado: "Você está em uma selva.",
         alternativas: [
             {
                 texto: "Você encontra um rio.",
