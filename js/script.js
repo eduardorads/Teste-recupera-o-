@@ -62,7 +62,7 @@ function respostaSelecionada(opcaoSelecionada) {
     const textoResultado = document.querySelector(".texto-resultado");
     const botaoJogarNovamente = document.querySelector(".novamente-btn");
     const botaoIniciar = document.querySelector(".iniciar-btn");
-    …substituiNome();
+    substituiNome();
         mostraResultado();
     }
 }
