@@ -26,15 +26,17 @@ function iniciaJogo() {
     mostraPergunta();
 }
 
-function mostraPergunta() {
-    if (atual >= perguntas.length) {
-        mostraResultado();
-        return;
-    }
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
-    mostraAlternativas();
+function iniciaJogo() {
+    atual = 0;
+    historiaFinal = "";
+    substituiNome(); // Mover a chamada aqui
+    telaInicial.style.display = 'none';
+    caixaPerguntas.classList.remove("mostrar");
+    caixaAlternativas.classList.remove("mostrar");
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
+}
+
 }
 
 function mostraAlternativas() {
@@ -67,6 +69,13 @@ function mostraResultado() {
 }
 
 function jogaNovamente() {
+    function substituiNome() {
+        for (const pergunta of perguntas) {
+            pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+        }
+    }
+    
+    substituiNome();
     atual = 0;
     historiaFinal = "";
     caixaResultado.classList.remove("mostrar");
